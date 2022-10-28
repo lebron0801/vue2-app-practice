@@ -1,0 +1,25 @@
+.widget-form-item {
+	position: relative;
+
+	&__item {
+		border: 2px solid #ffffff;
+		padding: 10px;
+
+		&.active {
+			border: 2px solid @primary-color;
+		}
+
+		&-drag,
+		&-action {
+			background-color: @primary-color;
+			color: #ffffff;
+			font-size: 16px;
+			height: 28px;
+			line-height: 28px;
+			padding: 0 6px;
+			position: absolute;
+			right: 0;
+			z-index: 9;
+		}
+	}
+}

@@ -15,7 +15,7 @@ import {
 	Button,
 	Calendar,
 	Card,
-	// Collapse,
+	Collapse,
 	// Carousel,
 	Cascader,
 	Checkbox,
@@ -38,7 +38,7 @@ import {
 	// notification,
 	Pagination,
 	Popconfirm,
-	// Popover,
+	Popover,
 	Progress,
 	Radio,
 	// Rate,
@@ -82,7 +82,7 @@ Vue.use(Avatar);
 Vue.use(Button);
 Vue.use(Calendar);
 Vue.use(Card);
-// Vue.use(Collapse);
+Vue.use(Collapse);
 // Vue.use(Carousel);
 Vue.use(Cascader);
 Vue.use(Checkbox);
@@ -104,7 +104,7 @@ Vue.use(Menu);
 Vue.use(Modal);
 Vue.use(Pagination);
 Vue.use(Popconfirm);
-// Vue.use(Popover);
+Vue.use(Popover);
 Vue.use(Progress);
 Vue.use(Radio);
 // Vue.use(Rate);

@@ -100,6 +100,13 @@ export default class Header extends Vue {
 								this.$router.push({ name: 'PageDesigner' });
 							}}
 						/>
+						<a-icon
+							type="ant-design"
+							class="header-btn-action"
+							onClick={() => {
+								this.$router.push({ name: 'FormDesignerNew' });
+							}}
+						/>
 						<a-tooltip placement="bottom">
 							<template slot="title">
 								<span>{i18nRender('refresh')}</span>

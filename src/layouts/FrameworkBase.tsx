@@ -15,33 +15,29 @@ export default class FrameworkBase extends Vue {
 		const layout = AppModule.getTheme.layout;
 		return (
 			<div class="framework-base-wrapper">
-				<a-layout
-					hasSider={layout === 'side' || layout === 'mix'}
-					style={{ height: '100vh', minHeight: '100vh' }}
-				>
-					{layout === 'side' || layout === 'mix'
-						? [
-								<div
-									class={classnames('framework-sider-placeholder', { collapsed: this.collapsed })}
-								></div>,
-								<Sider
-									props={{
-										collapsed: this.collapsed,
-										onCollapsed: () => {
-											this.collapsed = !this.collapsed;
-										}
-									}}
-								></Sider>
-						  ]
-						: null}
+				{window.__POWERED_BY_QIANKUN__ ? (
+					<Content></Content>
+				) : (
+					<a-layout
+						hasSider={layout === 'side' || layout === 'mix'}
+						style={{ height: '100vh', minHeight: '100vh' }}
+					>
+						{layout === 'side' || layout === 'mix'
+							? [
+									<div
+										class={classnames('framework-sider-placeholder', { collapsed: this.collapsed })}
+									></div>
+							  ]
+							: null}
 
-					<a-layout>
-						<Header class={classnames({ 'mix-layout': layout === 'mix' })}></Header>
-						{layout === 'mix' && <a-layout-header class="header-placeholder"></a-layout-header>}
-						{AppModule.getMultiTab ? <Tab></Tab> : null}
-						<Content></Content>
+						<a-layout>
+							<Header class={classnames({ 'mix-layout': layout === 'mix' })}></Header>
+							{layout === 'mix' && <a-layout-header class="header-placeholder"></a-layout-header>}
+							{AppModule.getMultiTab ? <Tab></Tab> : null}
+							<Content></Content>
+						</a-layout>
 					</a-layout>
-				</a-layout>
+				)}
 			</div>
 		);
 	}

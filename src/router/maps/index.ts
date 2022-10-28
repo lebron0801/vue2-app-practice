@@ -19,6 +19,13 @@ export const baseRouterMap: Array<RouteConfig> = [
 		component: () => import(/* webpackChunkName: "user" */ '@/views/config/PageDesigner')
 	},
 	{
+		path: '/config/form-designer-new',
+		code: 'FormDesignerNew',
+		name: 'FormDesignerNew',
+		meta: { title: '页面设计', requiresAuth: false, icon: '', keepAlive: false },
+		component: () => import(/* webpackChunkName: "user" */ '@/views/config/FormDesigner')
+	},
+	{
 		path: '*',
 		component: () => import(/* webpackChunkName: "fail" */ '@/views/exception/404')
 	},

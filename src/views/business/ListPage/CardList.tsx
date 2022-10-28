@@ -82,6 +82,8 @@ export default class CardList extends Vue {
 
 				<a-button
 					onClick={() => {
+						this.$refs.generateForm.getFormItemInstance('treeSelect').excuteOption();
+						return;
 						this.type = this.type ? false : true;
 						return;
 						this.$refs.generateForm

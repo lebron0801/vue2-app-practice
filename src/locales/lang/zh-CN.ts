@@ -7,6 +7,7 @@ import menu from './zh-CN/menu';
 import form from './zh-CN/form';
 
 import pageDesigner from './zh-CN/designer';
+import formily from './zh-CN/formily';
 
 const components = {
 	antLocale: antdZhCN,
@@ -20,5 +21,6 @@ export default {
 	...global,
 	...menu,
 	...form,
-	...pageDesigner
+	...pageDesigner,
+	...formily
 };

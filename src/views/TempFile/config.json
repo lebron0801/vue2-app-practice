@@ -27,14 +27,17 @@
 								"pattern": "",
 								"placeholder": "请输入",
 								"disabled": false,
-								"remoteFunc": "func_1619319244646"
+								"remoteFunc": "func_1619319244646",
+								"onchange": "",
+								"valueFormatter": "(str) => {\n    return str.replace(/aaa/, \"hahaha\");\n}"
 							},
 							"key": 1619319244646,
 							"model": "input",
 							"rules": [
 								{
 									"type": "string",
-									"message": "姓名格式不正确"
+									"message": "姓名格式不正确",
+									"trigger": ["blur", "change"]
 								}
 							]
 						}
@@ -61,7 +64,9 @@
 								"customRuleFunc": "",
 								"pattern": "",
 								"placeholder": "请输入",
-								"remoteFunc": "func_1619319405676"
+								"remoteFunc": "func_1619319405676",
+								"onchange": "",
+								"valueFormatter": ""
 							},
 							"key": 1619319405676,
 							"model": "textarea",
@@ -115,7 +120,10 @@
 									"message": ""
 								},
 								"customRuleFunc": "",
-								"remoteFunc": "func_1619319421962"
+								"remoteFunc": "func_1619319421962",
+								"precision": 0,
+								"onchange": "",
+								"valueFormatter": ""
 							},
 							"key": 1619319421962,
 							"model": "number",
@@ -164,7 +172,8 @@
 									"label": "label"
 								},
 								"remoteFunc": "func_1619319436308",
-								"disabled": false
+								"disabled": false,
+								"onchange": ""
 							},
 							"key": 1619319436308,
 							"model": "radio",
@@ -229,7 +238,8 @@
 									"label": "label"
 								},
 								"remoteFunc": "func_1619319467543",
-								"disabled": false
+								"disabled": false,
+								"onchange": ""
 							},
 							"key": 1619319467543,
 							"model": "checkbox",
@@ -269,7 +279,12 @@
 								"format": "HH:mm:ss",
 								"required": false,
 								"width": "100%",
-								"remoteFunc": "func_1619319484505"
+								"remoteFunc": "func_1619319484505",
+								"isRange": false,
+								"hourStep": 1,
+								"minuteStep": 1,
+								"secondStep": 1,
+								"onchange": ""
 							},
 							"key": 1619319484505,
 							"model": "time",
@@ -326,7 +341,11 @@
 								"format": "YYYY-MM-DD",
 								"required": false,
 								"width": "100%",
-								"remoteFunc": "func_1619319501860"
+								"remoteFunc": "func_1619319501860",
+								"hourStep": 1,
+								"minuteStep": 1,
+								"secondStep": 1,
+								"onchange": ""
 							},
 							"key": 1619319501860,
 							"model": "date",
@@ -367,7 +386,8 @@
 									"label": "title",
 									"children": "children"
 								},
-								"remoteFunc": "loadTree"
+								"remoteFunc": "loadTree",
+								"onchange": ""
 							},
 							"key": 1619319520870,
 							"model": "treeSelect",
@@ -435,7 +455,8 @@
 									"value": "value",
 									"label": "label"
 								},
-								"remoteFunc": "func_1619319568270"
+								"remoteFunc": "func_1619319568270",
+								"onchange": ""
 							},
 							"key": 1619319568270,
 							"model": "select",
@@ -468,7 +489,8 @@
 								"searchType": "HrEmp",
 								"autoSearch": false,
 								"count": 10,
-								"remoteFunc": "func_1619319650694"
+								"remoteFunc": "func_1619319650694",
+								"onchange": ""
 							},
 							"key": 1619319650694,
 							"model": "ddList",
@@ -494,35 +516,7 @@
 			"columns": [
 				{
 					"span": 12,
-					"list": [
-						{
-							"type": "customSelector",
-							"name": "自定义1",
-							"icon": "",
-							"options": {
-								"labelControl": false,
-								"labelCol": 6,
-								"isControl": false,
-								"controlCondition": "",
-								"defaultValue": "",
-								"type": "user-selector",
-								"multiple": true,
-								"disabled": false,
-								"clearable": true,
-								"advanceRuleType": "",
-								"driveList": [],
-								"customRuleFunc": "",
-								"placeholder": "",
-								"required": false,
-								"width": "100%",
-								"remoteFunc": "func_1619320221543",
-								"filterable": true
-							},
-							"key": 1619320221543,
-							"model": "customSelector1",
-							"rules": []
-						}
-					]
+					"list": []
 				},
 				{
 					"span": 12,
@@ -542,7 +536,8 @@
 								"driveList": [],
 								"customRuleFunc": "",
 								"disabled": false,
-								"remoteFunc": "func_1619320257210"
+								"remoteFunc": "func_1619320257210",
+								"onchange": ""
 							},
 							"key": 1619320257210,
 							"model": "switch",

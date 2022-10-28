@@ -8,6 +8,8 @@ import form from './en-US/form';
 
 import pageDesigner from './en-US/designer';
 
+import formily from './en-US/formily';
+
 const components = {
 	antLocale: antdEnUS,
 	momentName: 'eu',
@@ -20,5 +22,6 @@ export default {
 	...global,
 	...menu,
 	...form,
-	...pageDesigner
+	...pageDesigner,
+	...formily
 };
